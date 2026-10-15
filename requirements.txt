@@ -6,7 +6,7 @@ pandas
 scikit-learn
 face-recognition
 opencv-python-headless
-supabase
+supabase==2.32.0
 bcrypt
 segno
 pillow
