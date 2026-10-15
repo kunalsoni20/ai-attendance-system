@@ -35,6 +35,32 @@ python app.py
 
 The landing page runs at `http://localhost:5002`.
 
+## Production deployment
+
+### Streamlit Community Cloud (`app/`)
+
+Deploy from GitHub with these settings:
+
+- **Repository:** `kunalsoni20/ai-attendance-system`
+- **Branch:** `main`
+- **Main file path:** `app/app.py`
+- **Python version:** 3.11 (Advanced settings — required for `dlib` / `face-recognition` wheels)
+- **Secrets:** `SUPABASE_URL`, `SUPABASE_KEY`
+
+Debian packages are installed from the **repository-root** `packages.txt`. Python inference deps are declared in both root and `app/requirements.txt` (CPU PyTorch wheels, no Windows `dlib-bin`).
+
+Live engine: https://ai-biometric-attendance.streamlit.app
+
+### Vercel (`landing/`)
+
+The Flask showcase uses `landing/vercel.json` (`@vercel/python` + catch-all routes). Set the Vercel Root Directory to `landing` for GitHub integration, or deploy with:
+
+```bash
+npx vercel --prod --cwd landing
+```
+
+Call-to-action buttons on the landing page open the live Streamlit engine above.
+
 ## Project origin and attribution
 
 This repository combines and adapts the following public source projects:

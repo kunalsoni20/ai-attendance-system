@@ -1,14 +1,17 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
 streamlit
-numpy
+numpy>=1.26.4,<2.0
 pandas
 scikit-learn
 face-recognition
+opencv-python-headless
 supabase
 bcrypt
 segno
 pillow
 librosa
+soundfile
 resemblyzer
-torch
-webrtcvad
+webrtcvad-wheels
 python-dotenv
